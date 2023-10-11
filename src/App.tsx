@@ -1,23 +1,40 @@
-import CountBtn from '@/components/CountBtn';
-import ReactSVG from '@/assets/react.svg';
-import { Badge } from '@/components/ui/badge';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@/components/theme-provider';
+import Layout from './components/Layout';
+import { Theme } from '@radix-ui/themes';
+import { sidebarNavItems } from './components/nav-items';
 
-function App() {
+export default function App() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
-      <div className="flex flex-col items-center gap-y-4">
-        <div className="inline-flex items-center gap-x-4">
-          <img src={ReactSVG} alt="React Logo" className="w-32" />
-          <span className="text-6xl">+</span>
-          <img src={'/vite.svg'} alt="Vite Logo" className="w-32" />
-        </div>
-        <a href="https://ui.shadcn.com" rel="noopener noreferrer nofollow" target="_blank">
-          <Badge variant="outline">shadcn/ui</Badge>
-        </a>
-        <CountBtn />
-      </div>
-    </main>
+    <ThemeProvider defaultTheme='light' storageKey='vite-ui-theme'>
+      <Theme>
+        <Router>
+          <Layout>
+            <Routes>
+              {sidebarNavItems.map((item, index) => (
+                <Route key={index} path={item.href} element={React.createElement(item.component)} />
+              ))}
+            </Routes>
+          </Layout>
+        </Router>
+      </Theme>
+    </ThemeProvider>
   );
 }
 
-export default App;
+// export default function App() {
+//   return (
+//     <Router>
+//       <Layout>
+//         <Routes>
+//           {sidebarNavItems.map((item) => (
+//             <Route key={item.href} path={item.href}>
+//               {item.component}
+//             </Route>
+//           ))}
+//         </Routes>
+//       </Layout>
+//     </Router>
+//   );
+// }
