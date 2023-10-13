@@ -23,15 +23,28 @@ import {
   TableRow,
 } from '@/components/ui/table';
 
-import { DataTablePagination } from './data-table-pagination';
-import { DataTableToolbar } from './data-table-toolbar';
+import { DataTablePagination } from './create-table/data-table-pagination';
+import { DataTableToolbar } from './create-table/data-table-toolbar';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
-  data: TData[];
+  data: TData[] | any;
+  textFilterColumn?: string;
+  selectFilterColumns?: string[];
+  // selectFilterOptions?: {
+  //   column: string;
+  //   options: any[];
+  // }[];
+  selectFilterOptions?: any[];
 }
 
-export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
+export function DataTable<TData, TValue>({
+  columns,
+  data,
+  textFilterColumn,
+  selectFilterColumns,
+  selectFilterOptions,
+}: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
@@ -61,7 +74,12 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
 
   return (
     <div className='space-y-4'>
-      <DataTableToolbar table={table} />
+      <DataTableToolbar
+        table={table}
+        text_filter_column={textFilterColumn}
+        select_filter_columns={selectFilterColumns}
+        select_filter_options={selectFilterOptions}
+      />
       <div className='rounded-md border'>
         <Table>
           <TableHeader>

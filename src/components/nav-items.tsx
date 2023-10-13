@@ -1,7 +1,9 @@
 import React from 'react';
-import TaskPage from './testTable';
+import TaskPage from './taskTable';
+import BeerPage from './beerTable';
 import AlertDemo from './AlertDemo';
 import FileDrop from './file-upload';
+import getBeers from './api-call-test';
 
 export const sidebarNavItems = [
   {
@@ -17,7 +19,7 @@ export const sidebarNavItems = [
   {
     title: 'Statusoverzicht uitbetalingen',
     href: '/betalingen',
-    component: TaskPage,
+    component: BeerPage,
   },
   {
     title: 'Statusoverzicht burgers',
@@ -27,6 +29,6 @@ export const sidebarNavItems = [
   {
     title: 'API Documentatie',
     href: '/api',
-    component: TaskPage,
+    component: getBeers,
   },
 ];
