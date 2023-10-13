@@ -18,8 +18,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-import { labels } from './data/data';
-import { taskSchema } from './configs/schema';
+import { labels } from '../data/data';
 
 import { z } from 'zod';
 
@@ -28,10 +27,7 @@ interface DataTableRowActionsProps<TData> {
   schema: z.AnyZodObject;
 }
 
-export function DataTableRowActions<TData>({
-  row,
-  schema = taskSchema,
-}: DataTableRowActionsProps<TData>) {
+export function DataTableRowActions<TData>({ row, schema }: DataTableRowActionsProps<TData>) {
   const task = schema.parse(row.original);
 
   return (
