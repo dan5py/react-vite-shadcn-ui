@@ -1,4 +1,3 @@
-import React from 'react';
 import TaskPage from './taskTable';
 import BeerPage from './beerTable';
 import AlertDemo from './AlertDemo';

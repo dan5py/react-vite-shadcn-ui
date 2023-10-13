@@ -26,6 +26,7 @@ export default function FileDrop() {
         <Box className='flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm'>
           Sleep bestand hier naartoe of klik om te uploaden
         </Box>
+        <Box className='rt-ContextMenuContent rt-variant-soft' height={'9'}></Box>
         <Separator className='my-4' />
         <div className='space-y-4'>
           <h4 className='text-sm font-medium'>People with access</h4>

@@ -1,6 +1,6 @@
 import { DataTable } from './table/data-table';
 import { queryBeers } from '@/api/query-kit'; // Import your query functions
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AxiosError } from 'axios';
 import {
   beerColumns,
@@ -8,7 +8,7 @@ import {
   columnNames,
   columnOptions,
 } from './table/configs/columns-beer';
-import { beerSchemas, beerSchema, Beer } from './table/configs/schema';
+import { beerSchemas, Beer } from './table/configs/schema';
 
 export default function BeerPage() {
   const [beers, setBeers] = useState<Beer[] | Beer | undefined>();

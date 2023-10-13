@@ -1,0 +1,11 @@
+.radix-themes {
+  --default-font-family: 'Poppins', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 600;
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-medium);
+}

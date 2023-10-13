@@ -9,19 +9,7 @@ import {
   StopwatchIcon,
 } from '@radix-ui/react-icons';
 
-export const labels = [
-  {
-    value: 'bug',
-    label: 'Bug',
-  },
-  {
-    value: 'feature',
-    label: 'Feature',
-  },
-  {
-    value: 'documentation',
-    label: 'Documentation',
-  },
+export const brandCountries = [
   {
     value: 'Paulaner',
     label: 'Duits',
@@ -37,6 +25,22 @@ export const labels = [
   {
     value: 'Guinness',
     label: 'Iers',
+  },
+];
+
+export const labels = [
+  ...brandCountries,
+  {
+    value: 'bug',
+    label: 'Bug',
+  },
+  {
+    value: 'feature',
+    label: 'Feature',
+  },
+  {
+    value: 'documentation',
+    label: 'Documentation',
   },
 ];
 

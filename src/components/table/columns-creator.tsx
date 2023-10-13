@@ -1,10 +1,8 @@
-import React from 'react';
 import { ColumnDef } from '@tanstack/react-table';
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
 import { labels, icons } from './data/data';
 import { Task, Beer, Item, User } from './configs/schema';
-import { taskSchema, beerSchema, itemSchema, userSchema } from './configs/schema';
 import { DataTableColumnHeader } from './create-table/data-table-column-header';
 import { DataTableRowActions } from './create-table/data-table-row-actions';
 import { z } from 'zod';
@@ -12,7 +10,7 @@ import { z } from 'zod';
 // Define a generic type for the Zod schema
 type ZodSchema = Task | Beer | Item | User;
 
-interface ColumnConfig<T extends ZodSchema> {
+interface ColumnConfig {
   accessorKey: string;
   columnType: string;
   columnLabel: string;
@@ -21,7 +19,7 @@ interface ColumnConfig<T extends ZodSchema> {
 }
 
 export const generateColumns = <T extends ZodSchema>(
-  configurations: ColumnConfig<T>[],
+  configurations: ColumnConfig[],
   schema: z.AnyZodObject,
 ): ColumnDef<T>[] => {
   const columns: ColumnDef<T>[] = [];
@@ -102,15 +100,13 @@ export const generateColumns = <T extends ZodSchema>(
   return columns;
 };
 
-export const textFilter = <T extends ZodSchema>(
-  configurations: ColumnConfig<T>[],
-): string | undefined => {
+export const textFilter = (configurations: ColumnConfig[]): string | undefined => {
   const column = configurations.find((config) => config.options?.searchable === true)?.accessorKey;
   return column;
 };
 
-export const selectFilters = <T extends ZodSchema>(
-  configurations: ColumnConfig<T>[],
+export const selectFilters = (
+  configurations: ColumnConfig[],
 ): { columnNames: string[]; columnOptions: any[] } => {
   const columns = configurations.filter(
     (config) => config.options?.selectable === true && config.options?.selectOptions,
