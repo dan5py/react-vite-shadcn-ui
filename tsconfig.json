@@ -26,6 +26,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "src copy/components/filedrop"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
