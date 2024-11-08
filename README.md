@@ -73,10 +73,10 @@ react-vite-ui/
   │   ├── lib/           # Utility functions
   │   ├── App.tsx        # Application entry point
   │   └── index.tsx      # Main rendering file
-  ├── .eslintrc.json     # ESLint configuration
+  ├── eslint.config.js     # ESLint configuration
   ├── index.html         # HTML entry point
   ├── postcss.config.js  # PostCSS configuration
-  ├── tailwind.config.js # Tailwind CSS configuration
+  ├── tailwind.config.ts # Tailwind CSS configuration
   ├── tsconfig.json      # TypeScript configuration
   └── vite.config.ts     # Vite configuration
 ```
