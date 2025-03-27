@@ -4,12 +4,15 @@
 
 A React + Vite template powered by shadcn/ui.
 
+> [!NOTE]
+> This template uses Tailwind v3, if you want to use Tailwind v4, check the [tw4 branch](https://github.com/dan5py/react-vite-shadcn-ui/tree/tw4).
+
 ## 🎉 Features
 
 - **React** - A JavaScript library for building user interfaces.
 - **Vite** - A fast, opinionated frontend build tool.
 - **TypeScript** - A typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS** - A utility-first CSS framework.
+- **Tailwind CSS** - A utility-first CSS framework. (`v3`)
 - **Tailwind Prettier Plugin** - A Prettier plugin for formatting Tailwind CSS classes.
 - **ESLint** - A pluggable linting utility for JavaScript and TypeScript.
 - **PostCSS** - A tool for transforming CSS with JavaScript.
@@ -20,7 +23,7 @@ A React + Vite template powered by shadcn/ui.
 
 Make sure you have the following installed on your development machine:
 
-- Node.js (version 16 or above)
+- Node.js (version 22 or above)
 - pnpm (package manager)
 
 ## 🚀 Getting Started
