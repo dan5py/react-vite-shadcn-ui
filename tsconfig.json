@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
-    "composite": true,
-    /* Paths (for shadcn/ui since paths in tsconfig.app.json are not working) */
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "~/*": ["./src/*"]
     }
   },
   "files": [],
