@@ -1,5 +1,7 @@
 # React + Vite + TypeScript Template (react-vite-ui)
 
+[![Deploy on Hostinger](https://assets.hostinger.com/vps/deploy.svg)](https://www.hostinger.com/web-apps-hosting)
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dan5py/react-vite-ui/blob/main/LICENSE)
 
 A React + Vite template powered by shadcn/ui.
