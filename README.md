@@ -1,29 +1,24 @@
 # React + Vite + TypeScript Template (react-vite-ui)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dan5py/react-vite-ui/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dan5py/react-vite-shadcn-ui/blob/main/LICENSE)
 
 A React + Vite template powered by shadcn/ui.
-
-> [!NOTE]
-> This template uses Tailwind v3, if you want to use Tailwind v4, check the [tw4 branch](https://github.com/dan5py/react-vite-shadcn-ui/tree/tw4).
 
 ## 🎉 Features
 
 - **React** - A JavaScript library for building user interfaces.
 - **Vite** - A fast, opinionated frontend build tool.
 - **TypeScript** - A typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS** - A utility-first CSS framework. (`v4`)
-- **Tailwind Prettier Plugin** - A Prettier plugin for formatting Tailwind CSS classes.
-- **ESLint** - A pluggable linting utility for JavaScript and TypeScript.
-- **PostCSS** - A tool for transforming CSS with JavaScript.
-- **Autoprefixer** - A PostCSS plugin to parse CSS and add vendor prefixes.
+- **Tailwind CSS** - A utility-first CSS framework (`v4`).
+- **React Compiler** - Automatic memoization for React components.
+- **Oxlint** - A fast linter for JavaScript and TypeScript.
 - **shadcn/ui** - Beautifully designed components that you can copy and paste into your apps.
 
 ## ⚙️ Prerequisites
 
 Make sure you have the following installed on your development machine:
 
-- Node.js (version 24 or above)
+- Node.js (version 24.11 or above)
 - pnpm (package manager)
 
 ## 🚀 Getting Started
@@ -33,13 +28,13 @@ Follow these steps to get started with the react-vite-ui template:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dan5py/react-vite-ui.git
+   git clone https://github.com/dan5py/react-vite-shadcn-ui.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd react-vite-ui
+   cd react-vite-shadcn-ui
    ```
 
 3. Install the dependencies:
@@ -58,28 +53,27 @@ Follow these steps to get started with the react-vite-ui template:
 
 - pnpm dev - Starts the development server.
 - pnpm build - Builds the production-ready code.
-- pnpm lint - Runs ESLint to analyze and lint the code.
-- pnpm preview - Starts the Vite development server in preview mode.
+- pnpm lint - Runs Oxlint to analyze and lint the code.
+- pnpm preview - Serves the production build locally.
 
 ## 📂 Project Structure
 
 The project structure follows a standard React application layout:
 
 ```python
-react-vite-ui/
+react-vite-shadcn-ui/
   ├── node_modules/      # Project dependencies
   ├── public/            # Public assets
   ├── src/               # Application source code
   │   ├── components/    # React components
-  │   │   └── ui/        # shadc/ui components
+  │   │   └── ui/        # shadcn/ui components
   │   ├── styles/        # CSS stylesheets
   │   ├── lib/           # Utility functions
-  │   ├── App.tsx        # Application entry point
-  │   └── index.tsx      # Main rendering file
-  ├── eslint.config.js     # ESLint configuration
+  │   ├── App.tsx        # Root component
+  │   └── main.tsx       # Application entry point
+  ├── .oxlintrc.json     # Oxlint configuration
+  ├── components.json    # shadcn/ui configuration
   ├── index.html         # HTML entry point
-  ├── postcss.config.js  # PostCSS configuration
-  ├── tailwind.config.ts # Tailwind CSS configuration
   ├── tsconfig.json      # TypeScript configuration
   └── vite.config.ts     # Vite configuration
 ```
