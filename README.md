@@ -12,6 +12,7 @@ A React + Vite template powered by shadcn/ui.
 - **Tailwind CSS** - A utility-first CSS framework (`v4`).
 - **React Compiler** - Automatic memoization for React components.
 - **Oxlint** - A fast linter for JavaScript and TypeScript.
+- **Oxfmt** - A fast, Prettier-compatible code formatter.
 - **shadcn/ui** - Beautifully designed components that you can copy and paste into your apps.
 
 ## ⚙️ Prerequisites
@@ -54,6 +55,7 @@ Follow these steps to get started with the react-vite-ui template:
 - pnpm dev - Starts the development server.
 - pnpm build - Builds the production-ready code.
 - pnpm lint - Runs Oxlint to analyze and lint the code.
+- pnpm format - Formats the code with Oxfmt.
 - pnpm preview - Serves the production build locally.
 
 ## 📂 Project Structure
@@ -72,6 +74,7 @@ react-vite-shadcn-ui/
   │   ├── lib/           # Utility functions
   │   ├── App.tsx        # Root component
   │   └── main.tsx       # Application entry point
+  ├── .oxfmtrc.json      # Oxfmt configuration
   ├── .oxlintrc.json     # Oxlint configuration
   ├── components.json    # shadcn/ui configuration
   ├── index.html         # HTML entry point
