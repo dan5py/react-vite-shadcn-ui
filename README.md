@@ -65,6 +65,7 @@ react-vite-shadcn-ui/
   ├── node_modules/      # Project dependencies
   ├── public/            # Public assets
   ├── src/               # Application source code
+  │   ├── assets/        # Static assets
   │   ├── components/    # React components
   │   │   └── ui/        # shadcn/ui components
   │   ├── styles/        # CSS stylesheets
