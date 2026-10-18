@@ -18,7 +18,7 @@ A React + Vite template powered by shadcn/ui.
 
 Make sure you have the following installed on your development machine:
 
-- Node.js (version 24.11 or above)
+- Node.js (version 24 or above)
 - pnpm (package manager)
 
 ## 🚀 Getting Started
