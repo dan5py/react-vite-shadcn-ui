@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { Button } from "~/components/ui/button";
+import { useState } from "react"
+import { Button } from "~/components/ui/button"
 
 interface CountBtnProps {
-  className?: string;
+  className?: string
 }
 
 export default function CountBtn({ className }: CountBtnProps) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <Button
@@ -15,5 +15,5 @@ export default function CountBtn({ className }: CountBtnProps) {
     >
       Count is: {count}
     </Button>
-  );
+  )
 }

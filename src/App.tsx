@@ -1,10 +1,10 @@
-import CountBtn from "~/components/count-btn";
-import ReactSVG from "~/assets/react.svg";
-import { Badge } from "~/components/ui/badge";
+import CountBtn from "~/components/count-btn"
+import ReactSVG from "~/assets/react.svg"
+import { Badge } from "~/components/ui/badge"
 
 function App() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
+    <main className="flex h-screen flex-col items-center justify-center">
       <div className="flex flex-col items-center gap-y-4">
         <div className="inline-flex items-center gap-x-4">
           <img src={ReactSVG} alt="React Logo" className="w-32" />
@@ -21,7 +21,7 @@ function App() {
         <CountBtn />
       </div>
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
